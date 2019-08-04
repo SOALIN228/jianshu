@@ -83,3 +83,28 @@ React 简书
    export {reducer}
    ```
 
+4. 使用immutable可以避免我们将state中的数据修改，通过调用对应的api，每次返回全新的对象
+
+   ```react
+   import {constants} from './index'
+   import {fromJS} from 'immutable'
+   
+   const defaultStatus = fromJS({
+     focused: false
+   })
+   
+   export default (state = defaultStatus, action) => {
+     if (action.type === constants.SEARCH_FOCUS) {
+       // immutable对象的set方法，会结果之前immutable对象的值，返回新的对象
+       return state.set('focused', true)
+     }
+     /*...*/
+   }
+   
+   const mapStateToProps = (state) => {
+     return {
+       focused: state.header.get('focused') // 获取immutable对象的值
+     }
+   }
+   ```
+
