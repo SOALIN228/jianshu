@@ -122,3 +122,9 @@ React 简书
    }
    ```
 
+6. 使用ajax模拟假数据时，会先在public中查找
+
+   ```react
+   axios.get('/api/headerList.json') // 先在public/api中查找，否则发送ajax
+   ```
+

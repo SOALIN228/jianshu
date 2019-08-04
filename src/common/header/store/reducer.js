@@ -2,7 +2,8 @@ import {constants} from './index'
 import {fromJS} from 'immutable'
 
 const defaultStatus = fromJS({
-  focused: false
+  focused: false,
+  list: []
 })
 
 export default (state = defaultStatus, action) => {
@@ -12,6 +13,9 @@ export default (state = defaultStatus, action) => {
   }
   if (action.type === constants.SEARCH_BLUR) {
     return state.set('focused', false)
+  }
+  if (action.type === constants.CHANGE_LIST) {
+    return state.set('list', action.data)
   }
   return state
 }
