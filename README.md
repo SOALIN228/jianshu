@@ -108,3 +108,17 @@ React 简书
    }
    ```
 
+5. 使用redux-immutable解决获取state格式不统一问题
+
+   ```react
+   // src/store/reducer
+   import {combineReducers} from 'redux-immutable' // 更换
+   
+   const mapStateToProps = (state) => {
+     return {
+       // focused: state.get('header').get('focused') // 获取immutable对象的值
+       focused: state.getIn(['header', 'focused']) // 获取immutable对象的值
+     }
+   }
+   ```
+
