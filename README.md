@@ -62,7 +62,24 @@ React 简书
        )
      }
    }
-   
    ```
 
+3. 使用 combineReducers 对每个redux进行管理
+
+   ```react
+   // src/store/idnex.js
+   import {combineReducers} from 'redux'
+   import {reducer as headerReducer} from '../common/header/store'
+   
+   const reducer = combineReducers({
+     header: headerReducer
+   })
+   
+   export default reducer
+   
+   // header/store/index.js
+   import reducer from './reducer'
+   
+   export {reducer}
+   ```
 
