@@ -128,3 +128,23 @@ React 简书
    axios.get('/api/headerList.json') // 先在public/api中查找，否则发送ajax
    ```
 
+7. 使用immutable设置多个数据时，使用merge来代替set
+
+   ```react
+   case constants.CHANGE_LIST:
+     return state.merge({
+       list: action.data,
+       totalPage: action.totalPage
+     })
+   ```
+
+8. 使用箭头函数传参避免改变this
+
+   ```react
+   // this默认绑定完成，使用箭头函数不会改变this，所以可以我们可以放心传递参数
+   <SearchInfoSwitch 
+     onClick={() => handleChangePage(page, totalPage)}
+     >
+     换一批
+   </SearchInfoSwitch>
+   ```
