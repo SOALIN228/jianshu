@@ -1,5 +1,5 @@
-import {constants} from './index'
-import {fromJS} from 'immutable'
+import { constants } from './index'
+import { fromJS } from 'immutable'
 import axios from 'axios'
 
 const changeList = (data) => ({
