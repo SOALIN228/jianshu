@@ -148,3 +148,6 @@ React 简书
      换一批
    </SearchInfoSwitch>
    ```
+
+9. PureComponent会帮我们判断页面中组件数据是否发生改变，从而控制组件是否重新渲染，实质就是内部实现了shouldComponentUpdate，使用PureComponent一定要配合immutable，不然可能会出现bug
+

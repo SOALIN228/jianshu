@@ -7,9 +7,7 @@ export const HeaderWrapper = styled.div`
   border-bottom: 1px solid #f0f0f0;
 `
 
-export const Login = styled.a.attrs({
-  href: '/'
-})`
+export const Login = styled.div`
   position: absolute;
   top: 0;
   left: 0;
