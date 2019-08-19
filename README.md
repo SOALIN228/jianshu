@@ -165,3 +165,17 @@ React 简书
     </Provider>
     ```
 
+11. 路由重定向
+
+    ```react
+    import { Redirect } from 'react-router-dom'
+    
+    const { loginStatus } = this.props
+        if (!loginStatus) {
+          return (
+            ...
+          )
+        } else {
+          return <Redirect to={'/'}/>
+        }
+    ```
