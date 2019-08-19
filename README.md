@@ -179,3 +179,33 @@ React 简书
           return <Redirect to={'/'}/>
         }
     ```
+
+12. 组件异步加载
+
+    ```react
+    import React from 'react'
+    import Loadable from 'react-loadable' // 异步加载组件
+    
+    const LoadableComponent = Loadable({
+      loader: () => import('./'),
+      loading () {
+        return <div>正在加载</div> // 加载中显示内容
+      }
+    })
+    
+    export default () => <LoadableComponent/> // 导出无状态组件
+    ```
+
+    在APP.js中修改detail路径
+
+    ```react
+    import Detail from './pages/detail/loadable'
+    ```
+
+    获取路由参数
+
+    ```react
+    import { withRouter } from 'react-router-dom' // 用于异步获取路由参数
+    
+    export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Detail))
+    ```
