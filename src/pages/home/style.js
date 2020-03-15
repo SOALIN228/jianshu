@@ -9,7 +9,7 @@ export const HomeWrapper = styled.div`
 export const HomeLeft = styled.div`
   float: left;
   margin-left: 15px;
-  padding-top: 30px
+  padding-top: 30px;
   width: 625px;
   .banner-img {
     width: 625px;

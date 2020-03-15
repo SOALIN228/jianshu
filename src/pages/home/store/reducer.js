@@ -3,8 +3,8 @@ import { constants } from './index'
 
 const defaultStatus = fromJS({
   topicList: [],
-  articleList: [],
   recommendList: [],
+  articleList: [],
   articlePage: 1,
   showScroll: false
 })

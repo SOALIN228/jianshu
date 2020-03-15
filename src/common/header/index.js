@@ -45,7 +45,7 @@ class Header extends Component {
             <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
               <i ref={(icon) => {
                 this.spinIcon = icon
-              }} className={'iconfont spin'}>&#xe851;</i>
+              }} className='iconfont spin'>&#xe851;</i>
               换一批
             </SearchInfoSwitch>
           </SearchInfoTitle>
@@ -67,14 +67,14 @@ class Header extends Component {
           <Login/>
         </Link>
         <Nav>
-          <NavItem className={'left active'}>首页</NavItem>
-          <NavItem className={'left'}>下载App</NavItem>
+          <NavItem className='left active'>首页</NavItem>
+          <NavItem className='left'>下载App</NavItem>
           {
-            login ? <NavItem onClick={logout} className={'right'}>退出</NavItem> :
-              <Link to={'/login'}><NavItem className={'right'}>登录</NavItem></Link>
+            login ? <NavItem onClick={logout} className='right'>退出</NavItem> :
+              <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
           }
-          <NavItem className={'right'}>
-            <i className={'iconfont'}>&#xe666;</i>
+          <NavItem className='right'>
+            <i className='iconfont'>&#xe666;</i>
           </NavItem>
           <SearchWrapper>
             <CSSTransition in={focused}
@@ -91,13 +91,13 @@ class Header extends Component {
           </SearchWrapper>
         </Nav>
         <Addition>
-          <Link to={'/write'}>
-            <Button className={'witting'}>
-              <i className={'iconfont'}>&#xe603;</i>
+          <Link to='/write'>
+            <Button className='witting'>
+              <i className='iconfont'>&#xe603;</i>
               写文章
             </Button>
           </Link>
-          <Button className={'reg'}>注册</Button>
+          <Button className='reg'>注册</Button>
         </Addition>
       </HeaderWrapper>
     )

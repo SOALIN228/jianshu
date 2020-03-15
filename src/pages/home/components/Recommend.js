@@ -23,4 +23,4 @@ const mapStateToProps = (state) => ({
   list: state.getIn(['home', 'recommendList'])
 })
 
-export default connect(mapStateToProps)(Recommend)
+export default connect(mapStateToProps, null)(Recommend)

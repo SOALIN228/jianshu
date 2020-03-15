@@ -10,7 +10,7 @@ class Topic extends PureComponent {
         {
           list.map((item) => (
             <TopicItem key={item.get('id')}>
-              <img className={'topic-pic'}
+              <img className='topic-pic'
                    src={item.get('imgUrl')}
                    alt=""/>
               {item.get('title')}
